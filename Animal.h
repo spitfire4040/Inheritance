@@ -8,7 +8,7 @@ class Animal
 		Animal();
 		Animal(string newName, string newColor, char newGender, int newAge);
 		Animal(const Animal& orig);
-		~Animal();
+		virtual ~Animal();
 
 		string getName();
 		string getColor();
@@ -18,10 +18,23 @@ class Animal
 		void setColor(string newColor);
 		void setGender(char newGender);
 		void setAge(int newAge);
+		virtual void speak() = 0;
 
-	private:
+	protected:
 		string name;
 		string color;
 		char gender;
 		int age;
+};
+
+class Dog : public Animal
+{
+	public:
+		void speak();
+};
+
+class Cat : public Animal
+{
+	public:
+		void speak();
 };

@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <string>
+#include <iostream>
 #include "Animal.h"
 
 using namespace std;
@@ -62,4 +63,14 @@ void Animal::setGender(char newGender)
 void Animal::setAge(int newAge)
 {
 	age = newAge;
+}
+
+void Dog::speak()
+{
+	cout << "Bark! Bark! Bark!" << endl;
+}
+
+void Cat::speak()
+{
+	cout << "Meow! Meow! Meow!" << endl;
 }
