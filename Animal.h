@@ -8,7 +8,7 @@ class Animal
 		Animal();
 		Animal(string newName, string newColor, char newGender, int newAge);
 		Animal(const Animal& orig);
-		virtual ~Animal();
+		~Animal();
 
 		string getName();
 		string getColor();
